@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+
+<head>
+  
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shagun Spa Manali | Premium Spa and Call Girls Service Center</title>
+    <meta name="description" content="Experience the ultimate relaxation and luxury with Shagun Spa Manali. We offer premium spa treatments and exclusive call girls services.">
+    <meta name="keywords" content="Shagun Spa, Manali Spa, Call Girls Service, Luxury Spa, Manali Call Girls">
+    <link rel="canonical" href="https://www.yourwebsite.com/index.html">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="images/logo-no-background.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,700,700i&amp;display=swap">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="css/fonts.css"> -->
+     <!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/custom.css">
+<!-- Swiper Slider CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    .ie-panel {
+      display: none;
+      background: #212121;
+      padding: 10px 0;
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+      clear: both;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    html.ie-10 .ie-panel,
+    html.lt-ie-10 .ie-panel {
+      display: block;
+    }
+  </style>
+<style>
+  /* Staff Section Styles */
+.section-staff {
+  background-color: #222;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.staff-item img {
+  width: 100%;
+  max-width: 230px;
+  height: 300px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.staff-name {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: calc(100% - 30px); /* Show one slide and a portion of the next slide on mobile view */
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block; /* Hide navigation buttons on mobile */
+  }
+}
+
+@media (min-width: 769px) {
+  .swiper-slide {
+    width: 50%; /* Show two slides on desktop view */
+  }
+}
+
+.call-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.call-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Book Now Button Styles */
+.book-now-button {
+  position: fixed;
+  top: 85px;
+  left: 30px;
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0);
+  animation: appear 1s forwards, float 3s ease-in-out infinite;
+  z-index: 10;
+  text-decoration: none;
+}
+
+/* Animation keyframes */
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Media Queries for Desktop View */
+@media (min-width: 1024px) {
+  .book-now-button {
+    top: 210px; /* More space from the top in desktop view */
+  }
+}
+
+/* Adjust existing styles for swiper-container */
+.section-staff {
+  position: relative; /* Ensure the button is positioned relative to this container */
+}
+
+.desktop-only {
+  position: absolute;
+   top: 280px;
+   left: 50px;
+    z-index: 1;
+    width: 450px;
+  }
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none;
+    z-index: 9999;
+  }
+}
+.desktop-only-right {
+  position: absolute;
+   top: 280px;
+   right: 50px;
+    z-index: 1;
+    width: 450px;
+  }
+@media (max-width: 767px) {
+  .desktop-only-right {
+    display: none;
+    z-index: 9999;
+  }
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 1, // Show one slide and a portion of the next slide
+          spaceBetween: 10,
+        },
+        // when window width is >= 1024px
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+      },
+      autoplay: {
+        delay: 2000, // Delay in milliseconds (2 seconds)
+        disableOnInteraction: false, // Continue autoplay even when user interacts with slides
+      },
+      speed: 2000, // Transition speed between slides in milliseconds (0.8 seconds)
+      loop: true, // Enable continuous loop of slides
+      watchSlidesProgress: true, // Watch slides progress to keep autoplay running
+      watchSlidesVisibility: true, // Watch slides visibility to keep autoplay running
+    });
+  });
+</script>
+
+
+
+ 
+
+  <script>
+    $(document).ready(function () {
+      $('#footer').load('footer.html');
+    });
+  </script>
+</head>
+
+<body style="background-color: rgb(219, 217, 217);">
+
+  <div class="desktop-only">
+    <div>
+      <h2 style="font-size: 30px; font-weight: bold;">Discover Our Massage Services</h2>
+      <p style=" font-size: 25px;">Explore our exclusive range of massages tailored to provide relaxation and rejuvenation.</p>
+      <p style=" font-size: 20px;">Choose from a variety of massages such as Body to Body, Full Body, Happy Ending, and more.</p>
+    </div>
+  </div>
+  <div class="desktop-only-right">
+    <div style="position: absolute; top: 20px; left: 20px;">
+      <h2 style="font-size: 30px; font-weight: bold;">Indulge in Our Exclusive Massage Services</h2>
+      <p style=" font-size: 25px;">Embark on a journey of relaxation and renewal with our premium massage offerings.</p>
+      <p style=" font-size: 20px;">Choose from our diverse selection of massages including Body to Body, Full Body, Happy Ending, and more.</p>
+    </div>
+  </div>
+  
+  <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
+        src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
+        alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
+  </div>
+  <div class="preloader">
+    <div class="preloader-body">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
+      </div>
+      <p>Loading...</p>
+    </div>
+  </div>
+  <div class="page">
+    <header class="section page-header">
+      <!--RD Navbar-->
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+          data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+          data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+          data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
+          data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+          <div class="rd-navbar-main-outer">
+            <div class="rd-navbar-main">
+              <div class="rd-navbar-panel">
+                <div class="navbar-header">
+                  <!--RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                    <!--Brand-->
+                    <a class="brand" href="index.html">
+                      <img class="brand-logo-dark py-1" src="images/logo-no-background.png" alt="" width="150"
+                        height="40" />
+                    </a>
+                  </div>
+                  <!--RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                </div>
+              </div>
+
+              <div class="rd-navbar-main-element">
+                <div class="rd-navbar-nav-wrap">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="massage.html">Services</a>
+                      <!-- <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-massage.html">Single Massage</a>
+                          </li>
+                        </ul> -->
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="price.html">Pricing</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="rd-nav-item">
+                <div class="btn-wrap"><a class="button button-secondary button-sm"
+                    href="https://wa.me/9266241869?text=Hello%20Scotline%20Spa%20manali,%20I%20am%20interested%20in%20Massage%20Service%20please%20tell%20me%20what%20is%20the%20price%20of%20this%20service.">Get
+                    A Massage</a></div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+
+
+    <!-- Main banner -->
+    <div class="section section-main-banner" id="home">
+      <div class="main-banner-video" style="position: relative; overflow: hidden; height: 500px; width: 100%;">
+        <video autoplay loop muted playsinline style="width: 100%; height: 100%;">
+          <source src="./images/4608540-hd_1066_1920_25fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <!-- Add this button to your existing HTML structure -->
+<a href="https://wa.me/9266241869?text=Hi%20there,%20I%20would%20like%20to%20book%20a%20massage" target="_blank" class="book-now-button">Book Now</a>
+
+    </div>
+
+
+<!-- Staff Section -->
+<div class="section section-staff context-dark" id="staff">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide staff-item">
+        <img src="./images/callgirls/1.jpg" alt="Aanya">
+        <p class="staff-name">Aanya</p>
+        <a class="call-button" href="https://wa.me/9266241869?text=Hi%20Aanya,%20are%20we%20meeting?" target="_blank">Call Me</a>
+      </div>
+      <div class="swiper-slide staff-item">
+        <img src="./images/callgirls/3.jpg" alt="Kavya">
+        <p class="staff-name">Kavya</p>
+        <a class="call-button" href="https://wa.me/9266241869?text=Hi%20Kavya,%20are%20we%20meeting?" target="_blank">Call Me</a>
+      </div>
+      <div class="swiper-slide staff-item">
+        <img src="./images/callgirls/7.jpg" alt="Riya">
+        <p class="staff-name">Riya</p>
+        <a class="call-button" href="https://wa.me/9266241869?text=Hi%20Riya,%20are%20we%20meeting?" target="_blank">Call Me</a>
+      </div>
+      <div class="swiper-slide staff-item">
+        <img src="./images/callgirls/10.jpg" alt="Sophia">
+        <p class="staff-name">Sophia</p>
+        <a class="call-button" href="https://wa.me/9266241869?text=Hi%20Sophia,%20are%20we%20meeting?" target="_blank">Call Me</a>
+      </div>
+      <div class="swiper-slide staff-item">
+        <img src="./images/callgirls/11.jpg" alt="Ava">
+        <p class="staff-name">Ava</p>
+        <a class="call-button" href="https://wa.me/9266241869?text=Hi%20Ava,%20are%20we%20meeting?" target="_blank">Call Me</a>
+      </div>
+      <div class="swiper-slide staff-item">
+        <img src="./images/callgirls/12.jpg" alt="Emma">
+        <p class="staff-name">Emma</p>
+        <a class="call-button" href="https://wa.me/9266241869?text=Hi%20Emma,%20are%20we%20meeting?" target="_blank">Call Me</a>
+      </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+
+
+    
+    <!--How Works-->
+    <div class="section section section-lg">
+      <div class="container wide">
+        <div class="text-center">
+          <div class="subtitle">Massage made easy</div>
+          <h2 class="title">How ScottLine Works</h2>
+          <div class="subtitle-2">Getting a massage has never been easier.</div>
+        </div>
+        <div class="row row-md-80 row-sm-50">
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <div class="box-info-modern">
+              <div class="box-info-modern-figure"><img src="images/front-view-woman-working-spa.jpg" alt="" width="390"
+                  height="344" />
+              </div>
+              <h4 class="box-info-modern-title">Book</h4>
+              <div class="box-info-modern-text">Book an appointment on our website or at the salon’s reception</div>
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <div class="box-info-modern">
+              <div class="box-info-modern-figure"><img src="images/handsome-guy-enjoying-massage-therapy.jpg" alt=""
+                  width="390" height="344" />
+              </div>
+              <h4 class="box-info-modern-title">Meet</h4>
+              <div class="box-info-modern-text">Come in time and get ready to relax and unwind at Beautyrel.</div>
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <div class="box-info-modern">
+              <div class="box-info-modern-figure"><img
+                  src="images/medium-shot-smiley-woman-putting-suction-cups-back.jpg" alt="" width="390" height="344" />
+              </div>
+              <h4 class="box-info-modern-title">Relax</h4>
+              <div class="box-info-modern-text">Forget about all things that worry you and relax at our beauty salon.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Testimonials-->
+    <div class="section section-lg bg-gray-150">
+      <div class="text-center">
+        <p class="subtitle">Our customers love ScotLine</p>
+        <h2 class="title">Rated #1 massage in New York</h2>
+        <div class="subtitle-box">
+          <div class="subtitle-box-text">Reviews from:</div>
+          <div class="subtitle-box-media"><img src="images/title-img-153x38.png" alt="" width="153" height="38" />
+          </div>
+        </div>
+      </div>
+      <div class="owl-carousel owl-theme-1" data-items="1" data-sm-items="1" data-md-items="1" data-lg-items="1"
+        data-xl-items="2" data-xxl-items="3" data-margin="15px" data-nav="false" data-dots="true" data-autoplay="8000">
+        <div class="testimonial-box">
+          <div class="testimonial-title">Cool!</div>
+          <div class="testimonial-rate"><img src="images/rate-2-146x27.png" alt="" width="146" height="27" />
+          </div>
+          <div class="testimonial-text">“I have found all your services to be amazing. Most recently I received a
+            massage with cupping from Janet. She is a miracle worker. I store stress in my back and often have tension
+            from long hours on the computer. Janet somehow manages make my back feel like I have never had any moments
+            of stress in life.”</div>
+          <div class="testimonial-name">— Alisa R.</div>
+        </div>
+        <div class="testimonial-box">
+          <div class="testimonial-title">Excellent!</div>
+          <div class="testimonial-rate"><img src="images/rate-1-146x27.png" alt="" width="146" height="27" />
+          </div>
+          <div class="testimonial-text">“Your massage therapists are beyond incredible. They are so kind-hearted and
+            treat you like the individual that you are. They listen and take note of what pressure you like.”</div>
+          <div class="testimonial-name">— John C.</div>
+        </div>
+        <div class="testimonial-box">
+          <div class="testimonial-title">Amazing!</div>
+          <div class="testimonial-rate"><img src="images/rate-1-146x27.png" alt="" width="146" height="27" />
+          </div>
+          <div class="testimonial-text">"Your massage therapists are amazing at deep tissue massage. They take time
+            before the massage to truly understand problem areas and really listen! They really aim to provide a high
+            level of service."</div>
+          <div class="testimonial-name">— Evan M.</div>
+        </div>
+        <div class="testimonial-box">
+          <div class="testimonial-title">Excellent!</div>
+          <div class="testimonial-rate"><img src="images/rate-2-146x27.png" alt="" width="146" height="27" />
+          </div>
+          <div class="testimonial-text"> “I am pleased with the provided service and will continue my sessions with you.
+            Also, I would recommend Beautyrel massage to anybody who has chronic pain issues.”</div>
+          <div class="testimonial-name"> — Edward J.</div>
+        </div>
+      </div>
+    </div>
+    <!--Divider-->
+    <div class="section">
+      <div class="container wide">
+        <div class="divider"></div>
+      </div>
+    </div>
+    <!-- Services-->
+    <div class="section section section-lg">
+      <div class="container wide">
+        <div class="row row-md-30">
+          <div class="col-md-5 col-lg-5">
+            <div class="subtitle">Spa-quality service</div>
+            <h2 class="title">We Deliver Quality Service</h2>
+            <div class="subtitle-2">At our beauty salon, you get the highest level of customer service and the utmost
+              relaxation at a very affordable price.</div>
+            <div class="btn-wrap"><a class="button button-primary button-md"
+                href="https://wa.me/9266241869?text=Hello%20Scotline%20Spa%20manali,%20I%20am%20interested%20in%20Massage%20Service%20please%20tell%20me%20what%20is%20the%20price%20of%20this%20service."
+                data-caption-animate="fadeInUp" data-caption-delay="450">Book Now</a></div>
+          </div>
+          <div class="col-md-7 col-lg-7">
+            <div class="video-wrap mt-md-5 mt-sm-5"><a class="video-cover"
+                style="background-image: url('images/video-prev-1050x591.jpg');" data-lightgallery="item"
+                href="https://youtu.be/6tZSnxFV6Q0?si=4XXBeN3vmmACUk7e"><span
+                  class="icon mdi mdi-play-circle-outline"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="text-wrap">
+          <div class="row row-md-30">
+            <div class="col-md-6 col-lg-6"><img
+                src="images/female-therapist-rehabilitation-center-giving-back-massage.jpg" alt="" width="580"
+                height="550" />
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <div class="mt-4">
+                <div class="subtitle">True experts</div>
+                <h2 class="title">Body to Body Massage</h2>
+                <div class="subtitle-2">ScotLine offers exceptional body to body massage services performed by our team of dedicated and professionally trained  <strong> massage Girls</strong>. We are committed to helping you relax and rejuvenate, providing the ultimate body treatment experience.</div>
+                <div class="btn-wrap"><a class="button button-secondary button-md"
+                    href="https://wa.me/9266241869?text=Hello%20Scotline%20Spa%20manali,%20I%20am%20interested%20in%20Body%20to%20Body%20Massage%20Service%20please%20tell%20me%20more%20about%20this%20service."
+                    data-caption-animate="fadeInUp" data-caption-delay="450">Book Now</a></div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Divider-->
+    <div class="section">
+      <div class="container wide">
+        <div class="divider"></div>
+      </div>
+    </div>
+    <!-- Choose Your Massage-->
+    <div class="section section section-lg bg-default">
+      <div class="container wide">
+        <!--.divider-->
+        <div class="text-center">
+          <div class="subtitle">A massage for any occasion</div>
+          <h2 class="title">Choose Your Massage</h2>
+        </div>
+        <div class="row row-60">
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <article class="box-minimal">
+              <div class="box-minimal-icon"><img src="images/icon-1-44x44.png" alt="" width="44" height="44" />
+              </div>
+              <h4 class="box-minimal-title">Sensual Massage</h4>
+              <div class="box-minimal-text">
+                <p>Experience an intimate and sensual massage designed to awaken your senses and enhance relaxation.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <article class="box-minimal">
+              <div class="box-minimal-icon"><img src="images/icon-2-44x44.png" alt="" width="44" height="44" />
+              </div>
+              <h4 class="box-minimal-title">Erotic Massage</h4>
+              <div class="box-minimal-text">
+                <p>Indulge in an erotic massage that focuses on pleasure and arousal, enhancing your overall well-being.</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <article class="box-minimal">
+              <div class="box-minimal-icon"><img src="images/icon-3-44x44.png" alt="" width="44" height="44" />
+              </div>
+              <h4 class="box-minimal-title">Tantric Massage</h4>
+              <div class="box-minimal-text">
+                <p>Explore the ancient art of Tantra through a deeply spiritual and sensual massage experience.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="section section-xl bg-secondary">
+      <div class="container wide">
+        <div class="text-center">
+          <h2 class="title">Our dedicated team</h2>
+          <div class="subtitle-2 big">Premium service providers ready to fulfill your desires.</div>
+        </div>
+        <div class="row row-md-30 row-sm-50">
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <div class="box-info-modern box-md">
+              <div class="box-info-modern-figure"><img src="images/callgirls/13.jpg" alt="" width="390" height="360" /></div>
+              <h4 class="box-info-modern-title">Riya</h4>
+              <div class="box-info-modern-text">Founder, Manali callgirl -Shagun Parlour</div>
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <div class="box-info-modern box-md">
+              <div class="box-info-modern-figure"><img src="images/callgirls/4.jpg" alt="" width="390" height="360" /></div>
+              <h4 class="box-info-modern-title">Eva</h4>
+              <div class="box-info-modern-text">Specializes in discreet companionship</div>
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <div class="box-info-modern box-md">
+              <div class="box-info-modern-figure"><img src="images/callgirls/8.jpg" alt="" width="390" height="360" /></div>
+              <h4 class="box-info-modern-title">Moni</h4>
+              <div class="box-info-modern-text">Expert in personalized entertainment services</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Parallax-->
+<section class="section-lg parallax-container text-center" data-parallax-img="images/paralax-home.jpg">
+  <div class="parallax-content section-xxl context-dark">
+    <div class="container wide">
+      <div class="text-center">
+        <div class="row row-md-80 row-sm-60">
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <div class="box-price-simple">
+              <div class="box-price">
+                <p>₹5000</p>
+              </div>
+              <div class="box-price-title">
+                <p>1-hour Service</p>
+              </div>
+              <div class="box-price-descr">
+                <p class="text-custom-blue">1-hour Service perfectly customized to your needs.</p>
+              </div>
+              <a class="button button-primary button-md"
+                href="https://wa.me/9266241869?text=Hello%20Scotline%20Spa%20manali,%20I%20am%20interested%20in%20the%201-hour%20massage%20service%20(₹5000).%20Please%20provide%20more%20details."
+                target="_blank">Book Now</a>
+            </div>
+          </div>
+          <!-- New card for 3-hour massage -->
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <div class="box-price-simple">
+              <div class="box-price">
+                <p>₹10000</p>
+              </div>
+              <div class="box-price-title">
+                <p>3-hour Service</p>
+              </div>
+              <div class="box-price-descr">
+                <p class="text-custom-blue">3-hour Service tailored to provide extended relaxation and rejuvenation.</p>
+              </div>
+              <a class="button button-primary button-md"
+                href="https://wa.me/9266241869?text=Hello%20Scotline%20Spa%20manali,%20I%20am%20interested%20in%20the%203-hour%20massage%20service%20(₹10000).%20Please%20provide%20more%20details."
+                target="_blank">Book Now</a>
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <div class="box-price-simple">
+              <div class="box-price">
+                <p>₹15000</p>
+              </div>
+              <div class="box-price-title">
+                <p>One-night Service</p>
+              </div>
+              <div class="box-price-descr">
+                <p class="text-custom-blue">A full night of relaxation and pampering.</p>
+              </div>
+              <a class="button button-primary button-md"
+                href="https://wa.me/9266241869?text=Hello%20Scotline%20Spa%20manali,%20I%20am%20interested%20in%20the%20one-night%20massage%20service%20(₹15000).%20Please%20provide%20more%20details."
+                target="_blank">Book Now</a>
+            </div>
+          </div>
+          <div class="col-xs-10 col-md-6 col-lg-4">
+            <div class="box-price-simple">
+              <div class="box-price">
+                <p>₹25000</p>
+              </div>
+              <div class="box-price-title">
+                <p>24-hour Service</p>
+              </div>
+              <div class="box-price-descr">
+                <p class="text-custom-blue">A full day of relaxation and rejuvenation.</p>
+              </div>
+              <a class="button button-primary button-md"
+                href="https://wa.me/9266241869?text=Hello%20Scotline%20Spa%20manali,%20I%20am%20interested%20in%20the%2024-hour%20massage%20service%20(₹25000).%20Please%20provide%20more%20details."
+                target="_blank">Book Now</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <!--vacancy-->
+    <div class="section section-custom">
+      <div class="container wide">
+        <div class="text-center">
+          <h2 class="title">Are You a Qualified <br class="br-none"> Massage Girl</h2>
+          <div class="subtitle-2 big">Join our team to push your career forward today!</div>
+          <div class="row justify-content-center"><a class="button button-secondary button-md" href="https://wa.me/9266241869?text=Hello%20Scotline%20Spa%20manali,%20I%20am%20interested%20in%20Massage%20Service%20please%20tell%20me%20what%20is%20the%20price%20of%20this%20service."">Join Us</a>
+          </div>
+          <div class="img-wrap"><img src="images/home-4-830x446.jpg" alt="" width="830" height="446" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </div>
+
+  <div class="snackbars" id="form-output-global"></div>
+
+<!-- Swiper Slider JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+  <!--coded by dyoma-->
+</body>
+
+</html>

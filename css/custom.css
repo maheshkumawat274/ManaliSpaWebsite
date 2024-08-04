@@ -1,0 +1,32 @@
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .rd-navbar-brand {
+    order: 1; /* Ensure the brand is on the left */
+  }
+  
+  .rd-navbar-toggle {
+    order: 2; /* Ensure the toggle button is on the right */
+  }
+  
+  /* Add some padding or margin as needed */
+  .rd-navbar-brand,
+  .rd-navbar-toggle {
+    padding: 10px;
+  }
+  
+  /* Adjust the layout for larger screens if necessary */
+  @media (min-width: 992px) {
+    .navbar-header {
+      display: block;
+    }
+    .rd-navbar-brand,
+    .rd-navbar-toggle {
+      padding: 0;
+    }
+  }
+  

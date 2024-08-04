@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+
+<head>
+  <title>Single Massage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="images/logo-no-background.png" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,700,700i&amp;display=swap">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="css/fonts.css"> -->
+     <!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .ie-panel {
+      display: none;
+      background: #212121;
+      padding: 10px 0;
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+      clear: both;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    html.ie-10 .ie-panel,
+    html.lt-ie-10 .ie-panel {
+      display: block;
+    }
+
+    .massage-image {
+      height: 400px;
+      object-fit: cover;
+    }
+
+    /* CSS for mobile view */
+    @media (max-width: 767px) {
+      .box-info-modern-figure {
+        text-align: center;
+        /* Center align images */
+      }
+
+      .massage-image {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        /* Ensure images take full width of the container */
+        max-height: 100%;
+        /* Ensure images maintain aspect ratio */
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .box-info-modern-title {
+        margin-top: 10px;
+        /* Add some space between image and title */
+      }
+
+      .box-info-modern-text.small {
+        margin-top: 5px;
+        /* Add space between text content */
+      }
+    }
+
+    .card-effect {
+      border: 1px solid #ddd;
+      /* Border color */
+      border-radius: 8px;
+      /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* Shadow effect */
+      transition: transform 0.3s ease-in-out;
+      /* Smooth transition on hover */
+    }
+
+    .card-effect:hover {
+      transform: translateY(-5px);
+      /* Lift the card slightly on hover */
+    }
+
+    .hide {
+      display: none;
+      /* Hide element */
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Define massage data
+      var massageData = [{
+          type: "body-to-body",
+          title: "Body to Body Massage",
+          image: "images/close-up-hands-massaging-sole.jpg",
+          description: "Sensual massage involving full body contact for relaxation and pleasure.",
+          bookLink: "https://api.whatsapp.com/send?phone=9266241869&text=I%20am%20interested%20in%20booking%20Body%20to%20Body%20Massage"
+        },
+        {
+          type: "full-body",
+          title: "Full Body Massage",
+          image: "images/front-view-woman-working-spa.jpg",
+          description: "Comprehensive massage covering the entire body for relaxation and stress relief.",
+          bookLink: "https://api.whatsapp.com/send?phone=9266241869&text=I%20am%20interested%20in%20booking%20Full%20Body%20Massage"
+        },
+        {
+          type: "happy-ending",
+          title: "Happy Ending Massage",
+          image: "images/handsome-guy-enjoying-massage-therapy.jpg",
+          description: "Includes a special ending for complete relaxation and satisfaction.",
+          bookLink: "https://api.whatsapp.com/send?phone=9266241869&text=I%20am%20interested%20in%20booking%20Happy%20Ending%20Massage"
+        },
+        {
+          type: "couple",
+          title: "Couple Massage",
+          image: "images/callgirls/9.jpg",
+          description: "Massage experience for two people, enhancing relaxation together.",
+          bookLink: "https://api.whatsapp.com/send?phone=9266241869&text=I%20am%20interested%20in%20booking%20Couple%20Massage"
+        },
+        {
+          type: "heaven-special",
+          title: "Heaven Special Massage",
+          image: "images/callgirls/3.jpg",
+          description: "Exclusive massage treatment tailored to provide ultimate relaxation and rejuvenation.",
+          bookLink: "https://api.whatsapp.com/send?phone=9266241869&text=I%20am%20interested%20in%20booking%20Heaven%20Special%20Massage"
+        },
+      ];
+
+      // Function to get URL parameter value
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      };
+
+      // Get the type from URL parameter
+      var massageType = getUrlParameter('type');
+
+      // Find the matching massage data
+      var selectedMassage = massageData.find(function(massage) {
+        return massage.type === massageType;
+      });
+
+      // Display the selected massage content
+      if (selectedMassage) {
+        var massageHtml = '<div class="col-xs-10 col-md-6 col-lg-4">' +
+          '<div class="box-info-modern box-md card-effect">' +
+          '<div class="box-info-modern-figure">' +
+          '<img src="' + selectedMassage.image + '" alt="' + selectedMassage.title + '" class="massage-image" />' +
+          '</div>' +
+          '<div class="box-info-modern-title">' + selectedMassage.title + '</div>' +
+          '<div class="box-info-modern-text small">' + selectedMassage.description + '</div>' +
+          '<a href="' + selectedMassage.bookLink + '" class="btn btn-primary btn-block">Book Now</a>' +
+          '</div>' +
+          '</div>';
+
+        $('.massage-content').append(massageHtml);
+      } else {
+        // If no matching massage type found, handle accordingly
+        $('.massage-content').append('<div class="col-md-12">Massage type not found.</div>');
+      }
+
+      // Load footer dynamically
+      $('#footer').load('footer.html');
+    });
+  </script>
+</head>
+
+<body>
+  <div class="ie-panel">
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+      <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
+        alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+    </a>
+  </div>
+  <div class="preloader">
+    <div class="preloader-body">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
+      </div>
+      <p>Loading...</p>
+    </div>
+  </div>
+  <div class="page">
+    <header class="section page-header">
+      <!-- RD Navbar -->
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+          data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+          data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+          data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
+          data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+          <div class="rd-navbar-main-outer">
+            <div class="rd-navbar-main">
+              <div class="rd-navbar-panel">
+                <div class="navbar-header">
+                  <!-- RD Navbar Brand -->
+                  <div class="rd-navbar-brand">
+                    <!-- Brand -->
+                    <a class="brand" href="index.html">
+                      <img class="brand-logo-dark" src="images/logo-no-background.png" alt="" width="150"
+                        height="40" />
+                    </a>
+                  </div>
+                  <!-- RD Navbar Toggle -->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                </div>
+              </div>
+
+              <div class="rd-navbar-main-element">
+                <div class="rd-navbar-nav-wrap">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item "><a class="rd-nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="massage.html">Services</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="price.html">Pricing</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="rd-nav-item">
+                <div class="btn-wrap"><a class="button button-secondary button-sm"
+                    href="https://wa.me/9266241869?text=Hello%20Scotline%20Spa%20manali,%20I%20am%20interested%20in%20Massage%20Service%20please%20tell%20me%20what%20is%20the%20price%20of%20this%20service.">Get
+                    A Massage</a></div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="section section-xl bg-default text-center">
+      <div class="container">
+        <h1>Single Massage</h1>
+        <div class="subtitle-2">Welcome to manali callgirl services -Shagun spa</div>
+      </div>
+    </section>
+    <section class="section-xl bg-default text-center">
+      <div class="container">
+        <div class="row row-md-80 row-sm-50 massage-content">
+          <!-- Massage content will be appended here dynamically -->
+        </div>
+      </div>
+      <a href="https://wa.me/9266241869?text=Hi%20there,%20I%20would%20like%20to%20book%20a%20massage" target="_blank" class="btn btn-primary my-4">Book Now</a>
+
+    </section>
+    <footer class="section footer-modern context-dark" id="footer">
+      <!-- Footer content will be loaded dynamically -->
+    </footer>
+  </div>
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/script2.js"></script>
+</body>
+
+</html>

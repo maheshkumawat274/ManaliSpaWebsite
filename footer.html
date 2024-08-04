@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    <style>
+      /* Custom CSS for icons */
+      .whatsapp-icon, .call-icon {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 99999;
+        transition: transform 0.8s ease, bottom 0.8s ease; /* Adding transition for smooth zoom effect and bottom position */
+      }
+      
+      .whatsapp-icon {
+        bottom: 100px;
+        right: 20px;
+        animation: whatsapp-move 6s linear infinite; /* Animation for WhatsApp icon */
+      }
+      
+      .call-icon {
+        bottom: 180px; /* Adjust position as needed */
+        right: 20px; /* Adjust position as needed */
+        animation: call-move 6s linear infinite; /* Animation for Call icon */
+      }
+  
+      /* Keyframes for animation */
+      @keyframes whatsapp-move {
+        0% { bottom: 100px; }
+        50% { bottom: 120px; }
+        100% { bottom: 100px; }
+      }
+  
+      @keyframes call-move {
+        0% { bottom: 180px; }
+        50% { bottom: 160px; }
+        100% { bottom: 180px; }
+      }
+    </style>
+</head>
+<body>
+    <footer class="section footer-classic context-dark">
+        <div class="container wide">
+          <div class="row row-sm-30">
+            <div class="col-lg-6">
+              <div class="phone-wrap">
+                <div class="group-md group-middle"><a class="phone-link" href="tel:#">+919266241869</a><br>
+                  <div class="phone-sub">Call Me Back</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="text-lg-right">
+                <div class="group-xl group-middle">
+                  <p>Any complaints or suggestions?</p><a class="button button-white button-round-2" href="#" data-caption-animate="fadeInUp" data-caption-delay="450">Let Us Know</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-wrapper">
+            <div class="row row-sm-30">
+              <div class="col-sm-4 col-md-4 col-lg-3">
+                <p>Treatments</p>
+                <ul class="list">
+                  <li><a href="massage.html" data-waypoint-to="#">Body to Body Massage</a></li>
+                  <li><a href="massage.html" data-waypoint-to="#">Full Body Massage</a></li>
+                  <li><a href="massage.html" data-waypoint-to="#">Happy Ending Massage</a></li>
+                  <li><a href="massage.html" data-waypoint-to="#">Couple Massage</a></li>
+                  <li><a href="massage.html" data-waypoint-to="#">Heaven Special Massage</a></li>
+                  <li><a href="massage.html" data-waypoint-to="#">Therapeutic Massage</a></li>
+                  
+                </ul>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-3">
+                <p>ScottLine</p>
+                <ul class="list">
+                  <li><a href="about.html" data-waypoint-to="#">About Us</a></li>
+                  <li><a href="index.html" data-waypoint-to="#">Reviews</a></li>
+                  <li><a href="about.html" data-waypoint-to="#">Blog</a></li>
+                  
+                  <li><a href="about.html" data-waypoint-to="#">Careers</a></li>
+                 
+                </ul>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-3">
+                <p>Help</p>
+                <ul class="list">
+                  <li><a href="contacts.html" data-waypoint-to="#">Help Center</a></li>
+                 
+                  <li><a href="price.html" data-waypoint-to="#">Pricing</a></li>
+                 
+                  <li><a href="contacts.html" data-waypoint-to="#">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-3"><img src="images/footer-1-280x156.jpg" alt="" width="280" height="156"/>
+                <p>Top 5 Types of Massage That You Have to Try When Visiting Shagun spa Manali</p>
+                <div class="date"> January 30, 2020</div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-sm-30">
+            <div class="col-lg-6">
+              <div class="group-md group-middle">
+                <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span><span>&nbsp;</span><span>Manali callgirl service</span><span>.&nbsp;</span><a href="privacy-policy.html">Privacy Policy</a></p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="text-lg-right">
+                <ul class="group-xl group-middle">
+                  <li><a class="icon icon-default icon-sm mdi mdi-rss" href="#"></a></li>
+                  <li><a class="icon icon-default icon-sm mdi mdi-twitter" href="#"></a></li>
+                  <li><a class="icon icon-default icon-sm mdi mdi-facebook" href="#"></a></li>
+                  <li><a class="icon icon-default icon-sm mdi mdi-linkedin-box" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+       <!-- WhatsApp Icon -->
+  <a href="https://wa.me/9266241869?text=Hello%20Scotline%20Spa%20manali,%20I%20am%20interested%20in%20Massage%20Service%20please%20tell%20me%20what%20is%20the%20price%20of%20this%20service."
+  target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+</a>
+
+ <!-- Call Icon -->
+ <a href="tel:+919266241869">
+  <img src="./images/callicon.png" alt="Call" class="call-icon">
+</a>
+
+</body>
+</html>
